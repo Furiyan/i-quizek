@@ -8,6 +8,7 @@
 
 #import "QuizCell.h"
 
+#import "QuizOverview.h"
 #import "QuizView.h"
 #import "ViewFactory.h"
 
@@ -34,6 +35,12 @@ NSString * const QuizCellIdentifier = @"QuizCellIdentifier";
         [self makeConstraints];
     }
     return self;
+}
+
+#pragma mark - Reloading
+
+- (void)reloadWithQuizOverview:(QuizOverview *)quizOverview {
+    [self.quizView reloadWithQuizOverview:quizOverview];
 }
 
 #pragma mark - Adding Subview(s)

@@ -17,6 +17,10 @@
 		EED74ABF1D4E45360075F2C8 /* iQuizek.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EED74ABD1D4E45360075F2C8 /* iQuizek.xcdatamodeld */; };
 		EED74AC11D4E45360075F2C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EED74AC01D4E45360075F2C8 /* Assets.xcassets */; };
 		EED74AC41D4E45360075F2C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EED74AC21D4E45360075F2C8 /* LaunchScreen.storyboard */; };
+		EEE5ABA71D4E871D004A3377 /* QuizOverview.m in Sources */ = {isa = PBXBuildFile; fileRef = EEE5ABA61D4E871D004A3377 /* QuizOverview.m */; };
+		EEE5ABAB1D4E884C004A3377 /* QuizProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = EEE5ABAA1D4E884C004A3377 /* QuizProvider.m */; };
+		EEE5ABB01D4E8C7C004A3377 /* MappingFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = EEE5ABAF1D4E8C7C004A3377 /* MappingFactory.m */; };
+		EEE5ABB31D4E9F8A004A3377 /* DescriptorFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = EEE5ABB21D4E9F8A004A3377 /* DescriptorFactory.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +43,14 @@
 		EED74AC01D4E45360075F2C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EED74AC31D4E45360075F2C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EED74AC51D4E45360075F2C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EEE5ABA51D4E871D004A3377 /* QuizOverview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizOverview.h; sourceTree = "<group>"; };
+		EEE5ABA61D4E871D004A3377 /* QuizOverview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizOverview.m; sourceTree = "<group>"; };
+		EEE5ABA91D4E884C004A3377 /* QuizProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizProvider.h; sourceTree = "<group>"; };
+		EEE5ABAA1D4E884C004A3377 /* QuizProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizProvider.m; sourceTree = "<group>"; };
+		EEE5ABAE1D4E8C7C004A3377 /* MappingFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MappingFactory.h; sourceTree = "<group>"; };
+		EEE5ABAF1D4E8C7C004A3377 /* MappingFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MappingFactory.m; sourceTree = "<group>"; };
+		EEE5ABB11D4E9F8A004A3377 /* DescriptorFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DescriptorFactory.h; sourceTree = "<group>"; };
+		EEE5ABB21D4E9F8A004A3377 /* DescriptorFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DescriptorFactory.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,10 +86,10 @@
 		EE519E541D4E5333003DCDAF /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				EE519E551D4E5378003DCDAF /* QuizView.h */,
-				EE519E561D4E5378003DCDAF /* QuizView.m */,
 				EE519E5C1D4E6963003DCDAF /* QuizzesViewController.h */,
 				EE519E5D1D4E6963003DCDAF /* QuizzesViewController.m */,
+				EE519E551D4E5378003DCDAF /* QuizView.h */,
+				EE519E561D4E5378003DCDAF /* QuizView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -112,9 +124,9 @@
 		EED74AB01D4E45360075F2C8 /* iQuizek */ = {
 			isa = PBXGroup;
 			children = (
-				EE519E581D4E5559003DCDAF /* Factories */,
-				EE519E541D4E5333003DCDAF /* Views */,
-				EE519E501D4E5090003DCDAF /* Cells */,
+				EEE5ABA41D4E85DC004A3377 /* Models */,
+				EEE5ABAC1D4E8C0E004A3377 /* DataFetching */,
+				EEE5ABA21D4E8523004A3377 /* UserInterface */,
 				EED74AB41D4E45360075F2C8 /* AppDelegate.h */,
 				EED74AB51D4E45360075F2C8 /* AppDelegate.m */,
 				EED74AC01D4E45360075F2C8 /* Assets.xcassets */,
@@ -132,6 +144,54 @@
 				EED74AB21D4E45360075F2C8 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EEE5ABA21D4E8523004A3377 /* UserInterface */ = {
+			isa = PBXGroup;
+			children = (
+				EE519E581D4E5559003DCDAF /* Factories */,
+				EE519E541D4E5333003DCDAF /* Views */,
+				EE519E501D4E5090003DCDAF /* Cells */,
+			);
+			name = UserInterface;
+			sourceTree = "<group>";
+		};
+		EEE5ABA41D4E85DC004A3377 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EEE5ABA51D4E871D004A3377 /* QuizOverview.h */,
+				EEE5ABA61D4E871D004A3377 /* QuizOverview.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		EEE5ABA81D4E8835004A3377 /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				EEE5ABA91D4E884C004A3377 /* QuizProvider.h */,
+				EEE5ABAA1D4E884C004A3377 /* QuizProvider.m */,
+			);
+			name = Providers;
+			sourceTree = "<group>";
+		};
+		EEE5ABAC1D4E8C0E004A3377 /* DataFetching */ = {
+			isa = PBXGroup;
+			children = (
+				EEE5ABAD1D4E8C2D004A3377 /* Factories */,
+				EEE5ABA81D4E8835004A3377 /* Providers */,
+			);
+			name = DataFetching;
+			sourceTree = "<group>";
+		};
+		EEE5ABAD1D4E8C2D004A3377 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				EEE5ABAE1D4E8C7C004A3377 /* MappingFactory.h */,
+				EEE5ABAF1D4E8C7C004A3377 /* MappingFactory.m */,
+				EEE5ABB11D4E9F8A004A3377 /* DescriptorFactory.h */,
+				EEE5ABB21D4E9F8A004A3377 /* DescriptorFactory.m */,
+			);
+			name = Factories;
 			sourceTree = "<group>";
 		};
 		FCFE1D92F4019CD3B0E562E0 /* Frameworks */ = {
@@ -263,6 +323,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE519E571D4E5378003DCDAF /* QuizView.m in Sources */,
+				EEE5ABAB1D4E884C004A3377 /* QuizProvider.m in Sources */,
+				EEE5ABA71D4E871D004A3377 /* QuizOverview.m in Sources */,
+				EEE5ABB01D4E8C7C004A3377 /* MappingFactory.m in Sources */,
+				EEE5ABB31D4E9F8A004A3377 /* DescriptorFactory.m in Sources */,
 				EE519E531D4E5135003DCDAF /* QuizCell.m in Sources */,
 				EED74AB61D4E45360075F2C8 /* AppDelegate.m in Sources */,
 				EE519E5E1D4E6963003DCDAF /* QuizzesViewController.m in Sources */,

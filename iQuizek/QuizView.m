@@ -8,6 +8,7 @@
 
 #import "QuizView.h"
 
+#import "QuizOverview.h"
 #import "ViewFactory.h"
 
 #import "Masonry.h"
@@ -21,8 +22,13 @@
         [self addSubviews];
         [self makeConstraints];
     }
-    
     return self;
+}
+
+#pragma mark - Reloading
+
+- (void)reloadWithQuizOverview:(QuizOverview *)quizOverview {
+    self.titleLabel.text = quizOverview.title;
 }
 
 #pragma mark - Adding Subview(s)

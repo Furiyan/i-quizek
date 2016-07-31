@@ -8,10 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@class QuizView;
+@class QuizOverview, QuizView;
 
 extern NSString * const QuizCellIdentifier;
 
 @interface QuizCell : UITableViewCell
+
+#pragma mark - Reloading
+
+- (void)reloadWithQuizOverview:(QuizOverview *)quizOverview;
 
 @end

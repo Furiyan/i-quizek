@@ -8,10 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+@class QuizOverview;
+
 @interface QuizView : UIView
 
 #pragma mark - Subview(s)
 
 @property (weak, nonatomic) UILabel * titleLabel;
+
+#pragma mark - Reloading
+
+- (void)reloadWithQuizOverview:(QuizOverview *)quizOverview;
 
 @end
