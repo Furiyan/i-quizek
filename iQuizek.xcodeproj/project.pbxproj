@@ -8,10 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		5B9833E6900DD4F19684DE36 /* libPods-iQuizek.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E3124180F190795BA9C597B /* libPods-iQuizek.a */; };
+		EE519E531D4E5135003DCDAF /* QuizCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EE519E521D4E5135003DCDAF /* QuizCell.m */; };
+		EE519E571D4E5378003DCDAF /* QuizView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE519E561D4E5378003DCDAF /* QuizView.m */; };
+		EE519E5B1D4E55EA003DCDAF /* ViewFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = EE519E5A1D4E55EA003DCDAF /* ViewFactory.m */; };
+		EE519E5E1D4E6963003DCDAF /* QuizzesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE519E5D1D4E6963003DCDAF /* QuizzesViewController.m */; };
 		EED74AB31D4E45360075F2C8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EED74AB21D4E45360075F2C8 /* main.m */; };
 		EED74AB61D4E45360075F2C8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EED74AB51D4E45360075F2C8 /* AppDelegate.m */; };
-		EED74AB91D4E45360075F2C8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EED74AB81D4E45360075F2C8 /* ViewController.m */; };
-		EED74ABC1D4E45360075F2C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EED74ABA1D4E45360075F2C8 /* Main.storyboard */; };
 		EED74ABF1D4E45360075F2C8 /* iQuizek.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EED74ABD1D4E45360075F2C8 /* iQuizek.xcdatamodeld */; };
 		EED74AC11D4E45360075F2C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EED74AC01D4E45360075F2C8 /* Assets.xcassets */; };
 		EED74AC41D4E45360075F2C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EED74AC21D4E45360075F2C8 /* LaunchScreen.storyboard */; };
@@ -21,13 +23,18 @@
 		1E3124180F190795BA9C597B /* libPods-iQuizek.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iQuizek.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		73EEBD27388352A89BC38EFD /* Pods-iQuizek.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iQuizek.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iQuizek/Pods-iQuizek.debug.xcconfig"; sourceTree = "<group>"; };
 		EA8676A9492CB780791DE8E8 /* Pods-iQuizek.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iQuizek.release.xcconfig"; path = "Pods/Target Support Files/Pods-iQuizek/Pods-iQuizek.release.xcconfig"; sourceTree = "<group>"; };
+		EE519E511D4E5135003DCDAF /* QuizCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizCell.h; sourceTree = "<group>"; };
+		EE519E521D4E5135003DCDAF /* QuizCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizCell.m; sourceTree = "<group>"; };
+		EE519E551D4E5378003DCDAF /* QuizView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizView.h; sourceTree = "<group>"; };
+		EE519E561D4E5378003DCDAF /* QuizView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizView.m; sourceTree = "<group>"; };
+		EE519E591D4E55EA003DCDAF /* ViewFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewFactory.h; sourceTree = "<group>"; };
+		EE519E5A1D4E55EA003DCDAF /* ViewFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewFactory.m; sourceTree = "<group>"; };
+		EE519E5C1D4E6963003DCDAF /* QuizzesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizzesViewController.h; sourceTree = "<group>"; };
+		EE519E5D1D4E6963003DCDAF /* QuizzesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizzesViewController.m; sourceTree = "<group>"; };
 		EED74AAE1D4E45360075F2C8 /* iQuizek.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iQuizek.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EED74AB21D4E45360075F2C8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EED74AB41D4E45360075F2C8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EED74AB51D4E45360075F2C8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		EED74AB71D4E45360075F2C8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		EED74AB81D4E45360075F2C8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		EED74ABB1D4E45360075F2C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EED74ABE1D4E45360075F2C8 /* iQuizek.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iQuizek.xcdatamodel; sourceTree = "<group>"; };
 		EED74AC01D4E45360075F2C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EED74AC31D4E45360075F2C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -55,6 +62,35 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		EE519E501D4E5090003DCDAF /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				EE519E511D4E5135003DCDAF /* QuizCell.h */,
+				EE519E521D4E5135003DCDAF /* QuizCell.m */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		EE519E541D4E5333003DCDAF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EE519E551D4E5378003DCDAF /* QuizView.h */,
+				EE519E561D4E5378003DCDAF /* QuizView.m */,
+				EE519E5C1D4E6963003DCDAF /* QuizzesViewController.h */,
+				EE519E5D1D4E6963003DCDAF /* QuizzesViewController.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		EE519E581D4E5559003DCDAF /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				EE519E591D4E55EA003DCDAF /* ViewFactory.h */,
+				EE519E5A1D4E55EA003DCDAF /* ViewFactory.m */,
+			);
+			name = Factories;
+			sourceTree = "<group>";
+		};
 		EED74AA51D4E45360075F2C8 = {
 			isa = PBXGroup;
 			children = (
@@ -76,11 +112,11 @@
 		EED74AB01D4E45360075F2C8 /* iQuizek */ = {
 			isa = PBXGroup;
 			children = (
+				EE519E581D4E5559003DCDAF /* Factories */,
+				EE519E541D4E5333003DCDAF /* Views */,
+				EE519E501D4E5090003DCDAF /* Cells */,
 				EED74AB41D4E45360075F2C8 /* AppDelegate.h */,
 				EED74AB51D4E45360075F2C8 /* AppDelegate.m */,
-				EED74AB71D4E45360075F2C8 /* ViewController.h */,
-				EED74AB81D4E45360075F2C8 /* ViewController.m */,
-				EED74ABA1D4E45360075F2C8 /* Main.storyboard */,
 				EED74AC01D4E45360075F2C8 /* Assets.xcassets */,
 				EED74AC21D4E45360075F2C8 /* LaunchScreen.storyboard */,
 				EED74AC51D4E45360075F2C8 /* Info.plist */,
@@ -168,7 +204,6 @@
 			files = (
 				EED74AC41D4E45360075F2C8 /* LaunchScreen.storyboard in Resources */,
 				EED74AC11D4E45360075F2C8 /* Assets.xcassets in Resources */,
-				EED74ABC1D4E45360075F2C8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,8 +262,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EED74AB91D4E45360075F2C8 /* ViewController.m in Sources */,
+				EE519E571D4E5378003DCDAF /* QuizView.m in Sources */,
+				EE519E531D4E5135003DCDAF /* QuizCell.m in Sources */,
 				EED74AB61D4E45360075F2C8 /* AppDelegate.m in Sources */,
+				EE519E5E1D4E6963003DCDAF /* QuizzesViewController.m in Sources */,
+				EE519E5B1D4E55EA003DCDAF /* ViewFactory.m in Sources */,
 				EED74ABF1D4E45360075F2C8 /* iQuizek.xcdatamodeld in Sources */,
 				EED74AB31D4E45360075F2C8 /* main.m in Sources */,
 			);
@@ -237,14 +275,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		EED74ABA1D4E45360075F2C8 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EED74ABB1D4E45360075F2C8 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		EED74AC21D4E45360075F2C8 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

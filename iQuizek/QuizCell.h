@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  QuizCell.h
 //  iQuizek
 //
 //  Created by Marcin Rainka on 31/07/16.
@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@class QuizView;
 
+extern NSString * const QuizCellIdentifier;
+
+@interface QuizCell : UITableViewCell
 
 @end
-
