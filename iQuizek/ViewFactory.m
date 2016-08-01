@@ -10,6 +10,7 @@
 
 #import "QuizCell.h"
 #import "QuizOverviewView.h"
+#import "QuizProgressView.h"
 #import "QuizQuestionView.h"
 #import "QuizView.h"
 
@@ -19,6 +20,10 @@
 
 + (QuizOverviewView *)quizOverviewView {
     return [[QuizOverviewView alloc] initWithFrame:CGRectZero];
+}
+
++ (QuizProgressView *)quizProgressView {
+    return [[QuizProgressView alloc] initWithFrame:CGRectZero];
 }
 
 + (QuizView *)quizView {
@@ -75,6 +80,14 @@
     [view mas_makeConstraints:^(MASConstraintMaker * make) {
         make.height.equalTo(@1.0f);
     }];
+    return view;
+}
+
++ (UIView *)frame {
+    UIView * view = [[UIView alloc] initWithFrame:CGRectZero];
+    view.backgroundColor = [UIColor clearColor];
+    view.layer.borderWidth = 1.0f;
+    view.layer.borderColor = [UIColor whiteColor].CGColor;
     return view;
 }
 

@@ -80,6 +80,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 #pragma mark - Setup
 
 - (void)setUp {
+    self.title = @"Lista";
     self.quizzes = @[];
     self.quizProvider = [[QuizProvider alloc] init];
 }

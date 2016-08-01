@@ -8,6 +8,7 @@
 
 #import "QuizViewController.h"
 
+#import "QuizProgressView.h"
 #import "QuizProvider.h"
 #import "QuizQuestionViewController.h"
 #import "QuizView.h"
@@ -63,6 +64,8 @@
     [[[QuizProvider alloc] init] fetchQuestionsOfQuizWithId:self.quizId withCompletion:
         ^(NSArray<QuizQuestion *> * questions, NSError * error) {
             self.questions = questions;
+            [self.quizView.quizProgressView reloadWithQuestionsInNumber:questions.count];
+            [self.quizView.quizProgressView fillUpSegmentsInNumber:1];
             [self.quizQuestionViewCtrl reloadWithQuizQuestion:questions.firstObject];
         }];
 }
@@ -71,6 +74,7 @@
 
 - (void)goToNextQuestion {
     self.currentQuestionIndex++;
+    [self.quizView.quizProgressView fillUpSegmentsInNumber:self.currentQuestionIndex + 1];
     [self.quizQuestionViewCtrl reloadWithQuizQuestion:self.questions[self.currentQuestionIndex]];
 }
 

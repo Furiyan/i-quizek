@@ -94,7 +94,7 @@
 - (void)makeConstraintsForQuestionLabel {
     [self.questionLabel mas_makeConstraints:^(MASConstraintMaker * make) {
         make.leading.equalTo(self.mas_leading).with.offset(SmallMargin);
-        make.top.equalTo(self.mas_top).with.offset(SmallMargin);
+        make.top.equalTo(self.mas_top).with.offset(MediumMargin);
         make.trailing.equalTo(self.mas_trailing).with.offset(-SmallMargin);
     }];
 }

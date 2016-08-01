@@ -8,6 +8,7 @@
 
 #import "QuizView.h"
 
+#import "QuizProgressView.h"
 #import "ViewFactory.h"
 
 #import "Masonry.h"
@@ -28,14 +29,14 @@
 #pragma mark - Adding Subview(s)
 
 - (void)addSubviews {
-    [self addTopHairline];
+    [self addQuizProgressView];
     [self addQuizQuestionContainer];
 }
 
-- (void)addTopHairline {
-    UIView * topHairline = [ViewFactory horizontalHairline];
-    [self addSubview:topHairline];
-    self.topHairline = topHairline;
+- (void)addQuizProgressView {
+    QuizProgressView * quizProgressView = [ViewFactory quizProgressView];
+    [self addSubview:quizProgressView];
+    self.quizProgressView = quizProgressView;
 }
 
 - (void)addQuizQuestionContainer {
@@ -47,22 +48,23 @@
 #pragma mark - Making Constraint(s)
 
 - (void)makeConstraints {
-    [self makeConstraintsForTopHairline];
+    [self makeConstraintsForQuizProgressView];
     [self makeConstraintsForQuizQuestionContainer];
 }
 
-- (void)makeConstraintsForTopHairline {
-    [self.topHairline mas_makeConstraints:^(MASConstraintMaker * make) {
+- (void)makeConstraintsForQuizProgressView {
+    [self.quizProgressView mas_makeConstraints:^(MASConstraintMaker * make) {
         make.leading.equalTo(self.mas_leading);
         make.top.equalTo(self.mas_top);
         make.trailing.equalTo(self.mas_trailing);
+        make.height.equalTo(@(QuizProgressViewPreferredHeight));
     }];
 }
 
 - (void)makeConstraintsForQuizQuestionContainer {
     [self.quizQuestionContainer mas_makeConstraints:^(MASConstraintMaker * make) {
         make.leading.equalTo(self.mas_leading);
-        make.top.equalTo(self.topHairline.mas_bottom);
+        make.top.equalTo(self.quizProgressView.mas_bottom);
         make.trailing.equalTo(self.mas_trailing);
         make.bottom.equalTo(self.mas_bottom);
     }];

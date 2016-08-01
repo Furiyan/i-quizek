@@ -8,11 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+@class QuizProgressView;
+
 @interface QuizView : UIView
 
 #pragma mark - Subview(s)
 
-@property (weak, nonatomic) UIView * topHairline;
+@property (weak, nonatomic) QuizProgressView * quizProgressView;
 
 @property (nonatomic) UIView * quizQuestionContainer;
 

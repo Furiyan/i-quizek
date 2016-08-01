@@ -15,6 +15,7 @@
 		EE7B69421D4FAC38005C34C8 /* QuizViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE7B69411D4FAC38005C34C8 /* QuizViewController.m */; };
 		EE7B69451D4FC628005C34C8 /* Styler.m in Sources */ = {isa = PBXBuildFile; fileRef = EE7B69441D4FC628005C34C8 /* Styler.m */; };
 		EE7B69481D4FC909005C34C8 /* QuizView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE7B69471D4FC909005C34C8 /* QuizView.m */; };
+		EE7B694F1D4FDA50005C34C8 /* QuizProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE7B694E1D4FDA50005C34C8 /* QuizProgressView.m */; };
 		EEC6EA851D4F33F1007CFE70 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC6EA841D4F33F1007CFE70 /* Photo.m */; };
 		EED74AB31D4E45360075F2C8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EED74AB21D4E45360075F2C8 /* main.m */; };
 		EED74AB61D4E45360075F2C8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EED74AB51D4E45360075F2C8 /* AppDelegate.m */; };
@@ -50,6 +51,8 @@
 		EE7B69441D4FC628005C34C8 /* Styler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Styler.m; sourceTree = "<group>"; };
 		EE7B69461D4FC909005C34C8 /* QuizView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizView.h; sourceTree = "<group>"; };
 		EE7B69471D4FC909005C34C8 /* QuizView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizView.m; sourceTree = "<group>"; };
+		EE7B694D1D4FDA50005C34C8 /* QuizProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizProgressView.h; sourceTree = "<group>"; };
+		EE7B694E1D4FDA50005C34C8 /* QuizProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizProgressView.m; sourceTree = "<group>"; };
 		EEC6EA831D4F33F1007CFE70 /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
 		EEC6EA841D4F33F1007CFE70 /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
 		EED74AAE1D4E45360075F2C8 /* iQuizek.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iQuizek.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -119,6 +122,8 @@
 				EE7B69471D4FC909005C34C8 /* QuizView.m */,
 				EEFA0E581D4F7F600082EE14 /* QuizQuestionView.h */,
 				EEFA0E591D4F7F600082EE14 /* QuizQuestionView.m */,
+				EE7B694D1D4FDA50005C34C8 /* QuizProgressView.h */,
+				EE7B694E1D4FDA50005C34C8 /* QuizProgressView.m */,
 				EEFA0E5F1D4F88840082EE14 /* Controllers */,
 			);
 			name = Views;
@@ -375,6 +380,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE7B694F1D4FDA50005C34C8 /* QuizProgressView.m in Sources */,
 				EEC6EA851D4F33F1007CFE70 /* Photo.m in Sources */,
 				EE7B69481D4FC909005C34C8 /* QuizView.m in Sources */,
 				EE519E571D4E5378003DCDAF /* QuizOverviewView.m in Sources */,
