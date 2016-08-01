@@ -13,5 +13,6 @@
 @interface DescriptorFactory : NSObject
 
 + (RKResponseDescriptor *)quizOverviewResponseDescriptor;
++ (RKResponseDescriptor *)quizQuestionResponseDescriptor;
 
 @end

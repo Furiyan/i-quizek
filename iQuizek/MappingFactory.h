@@ -14,5 +14,7 @@
 
 + (RKObjectMapping *)quizOverviewMapping;
 + (RKObjectMapping *)photoMapping;
++ (RKObjectMapping *)quizQuestionMapping;
++ (RKObjectMapping *)quizAnswerMapping;
 
 @end

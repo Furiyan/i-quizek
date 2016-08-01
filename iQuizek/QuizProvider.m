@@ -10,11 +10,13 @@
 
 #import "DescriptorFactory.h"
 #import "QuizOverview.h"
+#import "QuizQuestion.h"
 
 #import "RKObjectManager.h"
 
 static NSString * const QuizEndpointsBase = @"http://quiz.o2.pl/api/v1/";
 static NSString * const QuizOverviewsPath = @"quizzes/0/100";
+static NSString * const QuizDetailsPath = @"quiz/%@/0";
 
 @interface QuizProvider ()
 
@@ -48,11 +50,31 @@ static NSString * const QuizOverviewsPath = @"quizzes/0/100";
         }];
 }
 
+- (void)fetchQuestionsOfQuizWithId:(NSNumber *)quizId
+                    withCompletion:(void (^)(NSArray<QuizQuestion *> * questions, NSError * error))completion {
+    [self.objectManager getObjectsAtPath:[NSString stringWithFormat:QuizDetailsPath, quizId]
+                              parameters:nil
+                                 success:
+        ^(RKObjectRequestOperation * operation, RKMappingResult * mappingResult) {
+            NSSortDescriptor * sortByOrder = [[NSSortDescriptor alloc] initWithKey:@"order" ascending:YES];
+            NSArray<QuizQuestion *> * questions = [mappingResult.set sortedArrayUsingDescriptors:@[sortByOrder]];
+            for (QuizQuestion * question in questions) {
+                question.answers = [question.answers sortedArrayUsingDescriptors:@[sortByOrder]];
+            }
+            completion(questions, nil);
+        }
+                                 failure:
+        ^(RKObjectRequestOperation * operation, NSError * error) {
+            completion(@[], error);
+        }];
+}
+
 #pragma mark - Setup
 
 - (void)setUpObjectManager {
     self.objectManager = [RKObjectManager managerWithBaseURL:[NSURL URLWithString:QuizEndpointsBase]];
     [self.objectManager addResponseDescriptor:[DescriptorFactory quizOverviewResponseDescriptor]];
+    [self.objectManager addResponseDescriptor:[DescriptorFactory quizQuestionResponseDescriptor]];
 }
 
 @end

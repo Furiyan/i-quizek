@@ -23,4 +23,12 @@
                                                    statusCodes:nil];
 }
 
++ (RKResponseDescriptor *)quizQuestionResponseDescriptor {
+    return [RKResponseDescriptor responseDescriptorWithMapping:[MappingFactory quizQuestionMapping]
+                                                        method:RKRequestMethodGET
+                                                   pathPattern:nil
+                                                       keyPath:@"questions"
+                                                   statusCodes:nil];
+}
+
 @end

@@ -8,12 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
-@class QuizOverview;
+@class QuizOverview, QuizQuestion;
 
 @interface QuizProvider : NSObject
 
 #pragma mark - Fetching the Data
 
 - (void)fetchQuizOverviewsWithCompletion:(void (^)(NSArray<QuizOverview *> * quizzes, NSError * error))completion;
+
+- (void)fetchQuestionsOfQuizWithId:(NSNumber *)quizId
+                    withCompletion:(void (^)(NSArray<QuizQuestion *> * questions, NSError * error))completion;
 
 @end

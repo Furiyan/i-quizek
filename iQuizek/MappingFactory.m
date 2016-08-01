@@ -9,7 +9,9 @@
 #import "MappingFactory.h"
 
 #import "Photo.h"
+#import "QuizAnswer.h"
 #import "QuizOverview.h"
+#import "QuizQuestion.h"
 
 #import "RKObjectMapping.h"
 #import "RKRelationshipMapping.h"
@@ -28,6 +30,22 @@
 + (RKObjectMapping *)photoMapping {
     RKObjectMapping * mapping = [RKObjectMapping mappingForClass:[Photo class]];
     [mapping addAttributeMappingsFromDictionary:@{ @"url" : @"url" }];
+    return mapping;
+}
+
++ (RKObjectMapping *)quizQuestionMapping {
+    RKObjectMapping * mapping = [RKObjectMapping mappingForClass:[QuizQuestion class]];
+    [mapping addAttributeMappingsFromDictionary:@{ @"order" : @"order", @"text" : @"text" }];
+    [mapping addPropertyMapping:
+        [RKRelationshipMapping relationshipMappingFromKeyPath:@"answers"
+                                                    toKeyPath:@"answers"
+                                                  withMapping:[MappingFactory quizAnswerMapping]]];
+    return mapping;
+}
+
++ (RKObjectMapping *)quizAnswerMapping {
+    RKObjectMapping * mapping = [RKObjectMapping mappingForClass:[QuizAnswer class]];
+    [mapping addAttributeMappingsFromDictionary:@{ @"order" : @"order", @"text" : @"text", @"isCorrect" : @"correct" }];
     return mapping;
 }
 
