@@ -43,6 +43,10 @@
     }];
 }
 
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
+}
+
 #pragma mark - UITableViewDataSource Method(s)
 
 - (UITableViewCell *)tableView:(UITableView *)tableView

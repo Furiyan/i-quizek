@@ -22,6 +22,7 @@
 		EEE5ABAB1D4E884C004A3377 /* QuizProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = EEE5ABAA1D4E884C004A3377 /* QuizProvider.m */; };
 		EEE5ABB01D4E8C7C004A3377 /* MappingFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = EEE5ABAF1D4E8C7C004A3377 /* MappingFactory.m */; };
 		EEE5ABB31D4E9F8A004A3377 /* DescriptorFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = EEE5ABB21D4E9F8A004A3377 /* DescriptorFactory.m */; };
+		EEFA0E501D4F4DDB0082EE14 /* UserInterfaceConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = EEFA0E4F1D4F4DDB0082EE14 /* UserInterfaceConstants.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,8 @@
 		EEE5ABAF1D4E8C7C004A3377 /* MappingFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MappingFactory.m; sourceTree = "<group>"; };
 		EEE5ABB11D4E9F8A004A3377 /* DescriptorFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DescriptorFactory.h; sourceTree = "<group>"; };
 		EEE5ABB21D4E9F8A004A3377 /* DescriptorFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DescriptorFactory.m; sourceTree = "<group>"; };
+		EEFA0E4E1D4F4DDB0082EE14 /* UserInterfaceConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInterfaceConstants.h; sourceTree = "<group>"; };
+		EEFA0E4F1D4F4DDB0082EE14 /* UserInterfaceConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInterfaceConstants.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +155,8 @@
 		EEE5ABA21D4E8523004A3377 /* UserInterface */ = {
 			isa = PBXGroup;
 			children = (
+				EEFA0E4E1D4F4DDB0082EE14 /* UserInterfaceConstants.h */,
+				EEFA0E4F1D4F4DDB0082EE14 /* UserInterfaceConstants.m */,
 				EE519E581D4E5559003DCDAF /* Factories */,
 				EE519E541D4E5333003DCDAF /* Views */,
 				EE519E501D4E5090003DCDAF /* Cells */,
@@ -333,6 +338,7 @@
 				EEE5ABA71D4E871D004A3377 /* QuizOverview.m in Sources */,
 				EEE5ABB01D4E8C7C004A3377 /* MappingFactory.m in Sources */,
 				EEE5ABB31D4E9F8A004A3377 /* DescriptorFactory.m in Sources */,
+				EEFA0E501D4F4DDB0082EE14 /* UserInterfaceConstants.m in Sources */,
 				EE519E531D4E5135003DCDAF /* QuizCell.m in Sources */,
 				EED74AB61D4E45360075F2C8 /* AppDelegate.m in Sources */,
 				EE519E5E1D4E6963003DCDAF /* QuizzesViewController.m in Sources */,

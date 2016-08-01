@@ -14,6 +14,8 @@ extern NSString * const QuizCellIdentifier;
 
 @interface QuizCell : UITableViewCell
 
++ (CGFloat)preferredHeight;
+
 #pragma mark - Reloading
 
 - (void)reloadWithQuizOverview:(QuizOverview *)quizOverview;

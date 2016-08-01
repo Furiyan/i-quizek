@@ -26,6 +26,15 @@ NSString * const QuizCellIdentifier = @"QuizCellIdentifier";
 
 @implementation QuizCell
 
++ (CGFloat)preferredHeight {
+    return QuizViewPreferredHeight;
+}
+
+- (void)removeSeparatorMargins {
+    self.preservesSuperviewLayoutMargins = NO;
+    self.layoutMargins = UIEdgeInsetsZero;
+}
+
 #pragma mark - UITableViewCell Override(s)
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style
@@ -33,6 +42,8 @@ NSString * const QuizCellIdentifier = @"QuizCellIdentifier";
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         [self addSubviews];
         [self makeConstraints];
+        [self style];
+        [self removeSeparatorMargins];
     }
     return self;
 }
@@ -65,6 +76,12 @@ NSString * const QuizCellIdentifier = @"QuizCellIdentifier";
     [self.quizView mas_makeConstraints:^(MASConstraintMaker * make) {
         make.edges.equalTo(self.contentView);
     }];
+}
+
+#pragma mark - Styling
+
+- (void)style {
+    self.backgroundColor = [UIColor blackColor];
 }
 
 @end

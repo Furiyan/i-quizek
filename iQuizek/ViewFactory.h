@@ -6,15 +6,17 @@
 //  Copyright © 2016 Marcin Rainka. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
-@class QuizView, UILabel, UITableView;
+@class QuizView;
 
 @interface ViewFactory : NSObject
 
 + (QuizView *)quizView;
     
 + (UILabel *)quizTitleLabel;
++ (UIView *)quizTitleContainer;
++ (UIImageView *)quizImageView;
 
 + (UITableView *)quizzesTableView;
 

@@ -10,11 +10,16 @@
 
 @class QuizOverview;
 
+extern const CGFloat QuizViewPreferredHeight;
+
 @interface QuizView : UIView
 
 #pragma mark - Subview(s)
 
 @property (weak, nonatomic) UILabel * titleLabel;
+@property (weak, nonatomic) UIView * titleContainer;
+
+@property (weak, nonatomic) UIImageView * imageView;
 
 #pragma mark - Reloading
 
