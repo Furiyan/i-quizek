@@ -8,16 +8,27 @@
 
 #import "MappingFactory.h"
 
+#import "Photo.h"
 #import "QuizOverview.h"
 
 #import "RKObjectMapping.h"
+#import "RKRelationshipMapping.h"
 
 @implementation MappingFactory
 
 + (RKObjectMapping *)quizOverviewMapping {
-    RKObjectMapping * quizOverviewMapping = [RKObjectMapping mappingForClass:[QuizOverview class]];
-    [quizOverviewMapping addAttributeMappingsFromDictionary:@{ @"title" : @"title" }];
-    return quizOverviewMapping;
+    RKObjectMapping * mapping = [RKObjectMapping mappingForClass:[QuizOverview class]];
+    [mapping addAttributeMappingsFromDictionary:@{ @"id" : @"id", @"title" : @"title" }];
+    [mapping addPropertyMapping:[RKRelationshipMapping relationshipMappingFromKeyPath:@"mainPhoto"
+                                                                            toKeyPath:@"mainPhoto"
+                                                                          withMapping:[MappingFactory photoMapping]]];
+    return mapping;
+}
+
++ (RKObjectMapping *)photoMapping {
+    RKObjectMapping * mapping = [RKObjectMapping mappingForClass:[Photo class]];
+    [mapping addAttributeMappingsFromDictionary:@{ @"url" : @"url" }];
+    return mapping;
 }
 
 @end

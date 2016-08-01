@@ -8,8 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
+@class Photo;
+
 @interface QuizOverview : NSObject
 
+@property (copy, nonatomic) NSNumber * id;
+
 @property (copy, nonatomic) NSString * title;
+
+@property (nonatomic) Photo * mainPhoto;
 
 @end

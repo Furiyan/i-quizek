@@ -13,5 +13,6 @@
 @interface MappingFactory : NSObject
 
 + (RKObjectMapping *)quizOverviewMapping;
++ (RKObjectMapping *)photoMapping;
 
 @end

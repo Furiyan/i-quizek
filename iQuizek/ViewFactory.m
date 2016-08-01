@@ -20,15 +20,15 @@
 }
 
 + (UILabel *)quizTitleLabel {
-    UILabel * quizTitleLabel = [[UILabel alloc] initWithFrame:CGRectZero];
-    quizTitleLabel.text = @"Przykładowy tytuł";
-    return quizTitleLabel;
+    UILabel * label = [[UILabel alloc] initWithFrame:CGRectZero];
+    label.text = @"Przykładowy tytuł";
+    return label;
 }
 
 + (UITableView *)quizzesTableView {
-    UITableView * quizzesTableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
-    [quizzesTableView registerClass:[QuizCell class] forCellReuseIdentifier:QuizCellIdentifier];
-    return quizzesTableView;
+    UITableView * tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
+    [tableView registerClass:[QuizCell class] forCellReuseIdentifier:QuizCellIdentifier];
+    return tableView;
 }
 
 @end

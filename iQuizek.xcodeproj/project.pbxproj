@@ -12,6 +12,7 @@
 		EE519E571D4E5378003DCDAF /* QuizView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE519E561D4E5378003DCDAF /* QuizView.m */; };
 		EE519E5B1D4E55EA003DCDAF /* ViewFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = EE519E5A1D4E55EA003DCDAF /* ViewFactory.m */; };
 		EE519E5E1D4E6963003DCDAF /* QuizzesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE519E5D1D4E6963003DCDAF /* QuizzesViewController.m */; };
+		EEC6EA851D4F33F1007CFE70 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC6EA841D4F33F1007CFE70 /* Photo.m */; };
 		EED74AB31D4E45360075F2C8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EED74AB21D4E45360075F2C8 /* main.m */; };
 		EED74AB61D4E45360075F2C8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EED74AB51D4E45360075F2C8 /* AppDelegate.m */; };
 		EED74ABF1D4E45360075F2C8 /* iQuizek.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EED74ABD1D4E45360075F2C8 /* iQuizek.xcdatamodeld */; };
@@ -35,6 +36,8 @@
 		EE519E5A1D4E55EA003DCDAF /* ViewFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewFactory.m; sourceTree = "<group>"; };
 		EE519E5C1D4E6963003DCDAF /* QuizzesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizzesViewController.h; sourceTree = "<group>"; };
 		EE519E5D1D4E6963003DCDAF /* QuizzesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizzesViewController.m; sourceTree = "<group>"; };
+		EEC6EA831D4F33F1007CFE70 /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
+		EEC6EA841D4F33F1007CFE70 /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
 		EED74AAE1D4E45360075F2C8 /* iQuizek.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iQuizek.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EED74AB21D4E45360075F2C8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EED74AB41D4E45360075F2C8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -161,6 +164,8 @@
 			children = (
 				EEE5ABA51D4E871D004A3377 /* QuizOverview.h */,
 				EEE5ABA61D4E871D004A3377 /* QuizOverview.m */,
+				EEC6EA831D4F33F1007CFE70 /* Photo.h */,
+				EEC6EA841D4F33F1007CFE70 /* Photo.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -322,6 +327,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEC6EA851D4F33F1007CFE70 /* Photo.m in Sources */,
 				EE519E571D4E5378003DCDAF /* QuizView.m in Sources */,
 				EEE5ABAB1D4E884C004A3377 /* QuizProvider.m in Sources */,
 				EEE5ABA71D4E871D004A3377 /* QuizOverview.m in Sources */,
