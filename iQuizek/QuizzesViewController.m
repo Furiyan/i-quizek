@@ -45,6 +45,9 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
+    if (self.quizzes.count) {
+        return;
+    }
     [self.quizProvider fetchQuizOverviewsWithCompletion:^(NSArray<QuizOverview *> * quizzes, NSError * error) {
         self.quizzes = quizzes;
         [self.quizzesTableView reloadData];

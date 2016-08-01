@@ -19,7 +19,7 @@
 
 #import "Masonry.h"
 
-@interface QuizViewController () <QuizQuestionViewControllerDelegate>
+@interface QuizViewController () <QuizQuestionViewControllerDelegate, QuizResultViewControllerDelegate>
 
 @property (weak, nonatomic) NSNumber * quizId;
 
@@ -66,6 +66,9 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
+    if (self.questions.count) {
+        return;
+    }
     [[[QuizProvider alloc] init] fetchQuestionsOfQuizWithId:self.quizId withCompletion:
         ^(NSArray<QuizQuestion *> * questions, NSError * error) {
             self.questions = questions;
@@ -87,8 +90,16 @@
     CGFloat percentageResult = (float)self.correctAnswers / self.questions.count * 100.0f;
     QuizResultViewController * resultViewCtrl
         = [[QuizResultViewController alloc] initWithPercentageResult:percentageResult];
+    resultViewCtrl.delegate = self;
     resultViewCtrl.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
     [self presentViewController:resultViewCtrl animated:YES completion:nil];
+}
+
+- (void)restartQuiz {
+    self.currentQuestionIndex = 0;
+    self.correctAnswers = 0;
+    [self.quizView.quizProgressView fillUpSegmentsInNumber:1];
+    [self.quizQuestionViewCtrl reloadWithQuizQuestion:self.questions.firstObject];
 }
 
 #pragma mark - QuizQuestionViewControllerDelegate Method(s)
@@ -102,6 +113,16 @@
     } else {
         [self finishQuiz];
     }
+}
+
+#pragma mark - QuizResultViewControllerDelegate Method(s)
+
+- (void)userDidWantRestartQuiz {
+    [self restartQuiz];
+}
+
+- (void)userDidWantReturnToQuizzes {
+    [self.navigationController popViewControllerAnimated:NO];
 }
 
 @end

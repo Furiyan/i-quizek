@@ -38,6 +38,8 @@
 - (void)addSubviews {
     [self addApplauseLabel];
     [self addPercentageResultView];
+    [self addTryAgainButton];
+    [self addReturnToQuizzesButton];
 }
 
 - (void)addApplauseLabel {
@@ -52,11 +54,27 @@
     self.percentageResultView = percentageResultView;
 }
 
+- (void)addTryAgainButton {
+    UIButton * tryAgainButton = [ViewFactory button];
+    [tryAgainButton setTitle:@"Spróbuj ponownie" forState:UIControlStateNormal];
+    [self addSubview:tryAgainButton];
+    self.tryAgainButton = tryAgainButton;
+}
+
+- (void)addReturnToQuizzesButton {
+    UIButton * returnToQuizzesButton = [ViewFactory button];
+    [returnToQuizzesButton setTitle:@"Wróć do listy quizów" forState:UIControlStateNormal];
+    [self addSubview:returnToQuizzesButton];
+    self.returnToQuizzesButton = returnToQuizzesButton;
+}
+
 #pragma mark - Making Constraint(s)
 
 - (void)makeConstraints {
     [self makeConstraintsForApplauseLabel];
     [self makeConstraintsForPercentageResultView];
+    [self makeConstraintsForTryAgainButton];
+    [self makeConstraintsForReturnToQuizzesButton];
 }
 
 - (void)makeConstraintsForApplauseLabel {
@@ -71,6 +89,22 @@
     [self.percentageResultView mas_makeConstraints:^(MASConstraintMaker * make) {
         make.centerX.equalTo(self.mas_centerX);
         make.centerY.equalTo(self.mas_centerY);
+    }];
+}
+
+- (void)makeConstraintsForTryAgainButton {
+    [self.tryAgainButton mas_makeConstraints:^(MASConstraintMaker * make) {
+        make.leading.equalTo(self.mas_leading).with.offset(SmallMargin);
+        make.trailing.equalTo(self.returnToQuizzesButton.mas_leading).with.offset(-SmallMargin);
+        make.bottom.equalTo(self.mas_bottom).with.offset(-MediumMargin);
+        make.width.equalTo(self.returnToQuizzesButton.mas_width);
+    }];
+}
+
+- (void)makeConstraintsForReturnToQuizzesButton {
+    [self.returnToQuizzesButton mas_makeConstraints:^(MASConstraintMaker * make) {
+        make.trailing.equalTo(self.mas_trailing).with.offset(-SmallMargin);
+        make.bottom.equalTo(self.mas_bottom).with.offset(-MediumMargin);
     }];
 }
 

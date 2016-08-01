@@ -16,6 +16,8 @@
 
 @property (weak, nonatomic) UILabel * applauseLabel;
 @property (weak, nonatomic) MBCircularProgressBarView * percentageResultView;
+@property (weak, nonatomic) UIButton * tryAgainButton;
+@property (weak, nonatomic) UIButton * returnToQuizzesButton;
 
 #pragma mark - Reloading
 

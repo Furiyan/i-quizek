@@ -48,6 +48,17 @@ NSString * const QuizCellIdentifier = @"QuizCellIdentifier";
     return self;
 }
 
+- (void)setHighlighted:(BOOL)highlighted
+              animated:(BOOL)animated {
+    if (highlighted) {
+        self.quizOverviewView.titleContainer.backgroundColor = [UIColor whiteColor];
+        self.quizOverviewView.titleLabel.textColor = [UIColor blackColor];
+    } else {
+        self.quizOverviewView.titleContainer.backgroundColor = [UIColor blackColor];
+        self.quizOverviewView.titleLabel.textColor = [UIColor whiteColor];
+    }
+}
+
 #pragma mark - Reloading
 
 - (void)reloadWithQuizOverview:(QuizOverview *)quizOverview {
@@ -82,6 +93,7 @@ NSString * const QuizCellIdentifier = @"QuizCellIdentifier";
 
 - (void)style {
     self.backgroundColor = [UIColor blackColor];
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
 }
 
 @end

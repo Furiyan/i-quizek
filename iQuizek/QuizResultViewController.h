@@ -10,7 +10,16 @@
 
 @class QuizResultView;
 
+@protocol QuizResultViewControllerDelegate <NSObject>
+
+- (void)userDidWantRestartQuiz;
+- (void)userDidWantReturnToQuizzes;
+
+@end
+
 @interface QuizResultViewController : UIViewController
+
+@property (weak, nonatomic) id<QuizResultViewControllerDelegate> delegate;
 
 #pragma mark - View
 

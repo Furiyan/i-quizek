@@ -37,11 +37,39 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setUpButtons];
     [self.quizResultView reloadWithPercentageResult:self.percentageResult];
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle {
     return UIStatusBarStyleLightContent;
+}
+
+#pragma mark - Action(s)
+
+- (void)restartQuiz {
+    if (self.delegate) {
+        [self.delegate userDidWantRestartQuiz];
+    }
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)returnToQuizzes {
+    if (self.delegate) {
+        [self.delegate userDidWantReturnToQuizzes];
+    }
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark - Setup
+
+- (void)setUpButtons {
+    [self.quizResultView.tryAgainButton addTarget:self
+                                           action:@selector(restartQuiz)
+                                 forControlEvents:UIControlEventTouchUpInside];
+    [self.quizResultView.returnToQuizzesButton addTarget:self
+                                                  action:@selector(returnToQuizzes)
+                                        forControlEvents:UIControlEventTouchUpInside];
 }
 
 @end
