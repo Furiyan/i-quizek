@@ -80,7 +80,6 @@ const CGFloat QuizProgressViewPreferredHeight = 6.0f;
                      afterSegment:(UIView *)previousSegment {
     [segment mas_makeConstraints:^(MASConstraintMaker * make) {
         if (previousSegment) {
-            make.leading.equalTo(previousSegment.mas_trailing);
             make.width.equalTo(previousSegment.mas_width);
         } else {
             make.leading.equalTo(self.mas_leading).with.offset(-1.0f);
