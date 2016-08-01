@@ -9,7 +9,7 @@
 #import "QuizCell.h"
 
 #import "QuizOverview.h"
-#import "QuizView.h"
+#import "QuizOverviewView.h"
 #import "ViewFactory.h"
 
 #import "Masonry.h"
@@ -20,14 +20,14 @@ NSString * const QuizCellIdentifier = @"QuizCellIdentifier";
 
 #pragma mark - Subview(s)
 
-@property (weak, nonatomic) QuizView * quizView;
+@property (weak, nonatomic) QuizOverviewView * quizOverviewView;
 
 @end
 
 @implementation QuizCell
 
 + (CGFloat)preferredHeight {
-    return QuizViewPreferredHeight;
+    return QuizOverviewViewPreferredHeight;
 }
 
 - (void)removeSeparatorMargins {
@@ -51,7 +51,7 @@ NSString * const QuizCellIdentifier = @"QuizCellIdentifier";
 #pragma mark - Reloading
 
 - (void)reloadWithQuizOverview:(QuizOverview *)quizOverview {
-    [self.quizView reloadWithQuizOverview:quizOverview];
+    [self.quizOverviewView reloadWithQuizOverview:quizOverview];
 }
 
 #pragma mark - Adding Subview(s)
@@ -61,19 +61,19 @@ NSString * const QuizCellIdentifier = @"QuizCellIdentifier";
 }
 
 - (void)addQuizView {
-    QuizView * quizView = [ViewFactory quizView];
-    [self.contentView addSubview:quizView];
-    self.quizView = quizView;
+    QuizOverviewView * quizOverviewView = [ViewFactory quizOverviewView];
+    [self.contentView addSubview:quizOverviewView];
+    self.quizOverviewView = quizOverviewView;
 }
 
 #pragma mark - Making Constraint(s)
 
 - (void)makeConstraints {
-    [self makeConstraintsForQuizView];
+    [self makeConstraintsForQuizOverviewView];
 }
 
-- (void)makeConstraintsForQuizView {
-    [self.quizView mas_makeConstraints:^(MASConstraintMaker * make) {
+- (void)makeConstraintsForQuizOverviewView {
+    [self.quizOverviewView mas_makeConstraints:^(MASConstraintMaker * make) {
         make.edges.equalTo(self.contentView);
     }];
 }

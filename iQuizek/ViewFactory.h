@@ -8,16 +8,27 @@
 
 #import <UIKit/UIKit.h>
 
-@class QuizView;
+@class QuizOverviewView, QuizQuestionView, QuizView;
 
 @interface ViewFactory : NSObject
 
++ (QuizOverviewView *)quizOverviewView;
 + (QuizView *)quizView;
++ (QuizQuestionView *)quizQuestionView;
     
++ (UILabel *)quizQuestionLabel;
 + (UILabel *)quizTitleLabel;
-+ (UIView *)quizTitleContainer;
+
 + (UIImageView *)quizImageView;
 
 + (UITableView *)quizzesTableView;
+
++ (UIView *)quizTitleContainer;
+
++ (UIView *)horizontalHairline;
+    
++ (UIButton *)button;
+
++ (UIView *)container;
 
 @end

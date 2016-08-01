@@ -20,25 +20,24 @@ static NSString * const QuizDetailsPath = @"quiz/%@/0";
 
 @interface QuizProvider ()
 
-@property (nonatomic) RKObjectManager * objectManager;
-
 @end
 
 @implementation QuizProvider
 
-#pragma mark - NSObject Override(s)
-
-- (instancetype)init {
-    if (self = [super init]) {
-        [self setUpObjectManager];
++ (RKObjectManager *)objectManager {
+    static RKObjectManager * objectManager;
+    if (!objectManager) {
+        objectManager = [RKObjectManager managerWithBaseURL:[NSURL URLWithString:QuizEndpointsBase]];
+        [self.objectManager addResponseDescriptor:[DescriptorFactory quizOverviewResponseDescriptor]];
+        [self.objectManager addResponseDescriptor:[DescriptorFactory quizQuestionResponseDescriptor]];
     }
-    return self;
+    return objectManager;
 }
 
 #pragma mark - Fetching the Data
 
 - (void)fetchQuizOverviewsWithCompletion:(void (^)(NSArray<QuizOverview *> * quizzes, NSError * error))completion {
-    [self.objectManager getObjectsAtPath:QuizOverviewsPath
+    [[QuizProvider objectManager] getObjectsAtPath:QuizOverviewsPath
                               parameters:nil
                                  success:
         ^(RKObjectRequestOperation * operation, RKMappingResult * mappingResult) {
@@ -52,7 +51,7 @@ static NSString * const QuizDetailsPath = @"quiz/%@/0";
 
 - (void)fetchQuestionsOfQuizWithId:(NSNumber *)quizId
                     withCompletion:(void (^)(NSArray<QuizQuestion *> * questions, NSError * error))completion {
-    [self.objectManager getObjectsAtPath:[NSString stringWithFormat:QuizDetailsPath, quizId]
+    [[QuizProvider objectManager] getObjectsAtPath:[NSString stringWithFormat:QuizDetailsPath, quizId]
                               parameters:nil
                                  success:
         ^(RKObjectRequestOperation * operation, RKMappingResult * mappingResult) {
@@ -67,14 +66,6 @@ static NSString * const QuizDetailsPath = @"quiz/%@/0";
         ^(RKObjectRequestOperation * operation, NSError * error) {
             completion(@[], error);
         }];
-}
-
-#pragma mark - Setup
-
-- (void)setUpObjectManager {
-    self.objectManager = [RKObjectManager managerWithBaseURL:[NSURL URLWithString:QuizEndpointsBase]];
-    [self.objectManager addResponseDescriptor:[DescriptorFactory quizOverviewResponseDescriptor]];
-    [self.objectManager addResponseDescriptor:[DescriptorFactory quizQuestionResponseDescriptor]];
 }
 
 @end

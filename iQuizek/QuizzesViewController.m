@@ -9,10 +9,12 @@
 #import "QuizzesViewController.h"
 
 #import "QuizCell.h"
+#import "QuizOverview.h"
 #import "QuizProvider.h"
+#import "QuizViewController.h"
 #import "ViewFactory.h"
 
-@interface QuizzesViewController () <UITableViewDataSource>
+@interface QuizzesViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic) NSArray<QuizOverview *> * quizzes;
 
@@ -26,6 +28,7 @@
 
 - (void)loadView {
     UITableView * quizzesTableView = [ViewFactory quizzesTableView];
+    quizzesTableView.delegate = self;
     quizzesTableView.dataSource = self;
     self.view = self.quizzesTableView = quizzesTableView;
 }
@@ -33,6 +36,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setUp];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBarHidden = YES;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -45,6 +53,14 @@
 
 - (UIStatusBarStyle)preferredStatusBarStyle {
     return UIStatusBarStyleLightContent;
+}
+
+#pragma mark - UITableViewDelegate Method(s)
+
+- (void)      tableView:(UITableView *)tableView
+didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    QuizViewController * quizViewCtrl = [[QuizViewController alloc] initWithQuizId:self.quizzes[indexPath.row].id];
+    [self.navigationController pushViewController:quizViewCtrl animated:YES];
 }
 
 #pragma mark - UITableViewDataSource Method(s)

@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 
 #import "QuizzesViewController.h"
+#import "Styler.h"
 
 @interface AppDelegate ()
 
@@ -19,7 +20,11 @@
 - (BOOL)          application:(UIApplication *)application
 didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    self.window.rootViewController = [[QuizzesViewController alloc] init];
+    QuizzesViewController * quizzesViewCtrl = [[QuizzesViewController alloc] init];
+    UINavigationController * navigationCtrl
+        = [[UINavigationController alloc] initWithRootViewController:quizzesViewCtrl];
+    [Styler styleNavigationBar:navigationCtrl.navigationBar];
+    self.window.rootViewController = navigationCtrl;
     [self.window makeKeyAndVisible];
     return YES;
 }
