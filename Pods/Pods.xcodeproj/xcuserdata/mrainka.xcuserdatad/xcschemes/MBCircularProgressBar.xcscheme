@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '1A21823BC677DD29AC4CDEE6F530A10A'
-               BlueprintName = 'SDWebImage'
+               BlueprintIdentifier = '130ACB22FAE0DB6A8F1E2C5EECE85AD5'
+               BlueprintName = 'MBCircularProgressBar'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libSDWebImage.a'>
+               BuildableName = 'libMBCircularProgressBar.a'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

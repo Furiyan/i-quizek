@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 
+#import "QuizNavigationController.h"
 #import "QuizzesViewController.h"
 #import "Styler.h"
 
@@ -21,8 +22,8 @@
 didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     QuizzesViewController * quizzesViewCtrl = [[QuizzesViewController alloc] init];
-    UINavigationController * navigationCtrl
-        = [[UINavigationController alloc] initWithRootViewController:quizzesViewCtrl];
+    QuizNavigationController * navigationCtrl
+        = [[QuizNavigationController alloc] initWithRootViewController:quizzesViewCtrl];
     [Styler styleNavigationBar:navigationCtrl.navigationBar];
     self.window.rootViewController = navigationCtrl;
     [self.window makeKeyAndVisible];

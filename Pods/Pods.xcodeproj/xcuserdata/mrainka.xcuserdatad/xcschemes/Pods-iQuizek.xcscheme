@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '623A84209B0755456E0E01B8EFEE10FE'
+               BlueprintIdentifier = '1AB8413965390F98BB8B41451C476D2D'
                BlueprintName = 'Pods-iQuizek'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libPods-iQuizek.a'>

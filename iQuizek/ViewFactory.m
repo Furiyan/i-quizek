@@ -12,9 +12,11 @@
 #import "QuizOverviewView.h"
 #import "QuizProgressView.h"
 #import "QuizQuestionView.h"
+#import "QuizResultView.h"
 #import "QuizView.h"
 
 #import "Masonry.h"
+#import <MBCircularProgressBar/MBCircularProgressBarView.h>
 
 @implementation ViewFactory
 
@@ -26,12 +28,16 @@
     return [[QuizProgressView alloc] initWithFrame:CGRectZero];
 }
 
-+ (QuizView *)quizView {
-    return [[QuizView alloc] initWithFrame:CGRectZero];
-}
-
 + (QuizQuestionView *)quizQuestionView {
     return [[QuizQuestionView alloc] initWithFrame:CGRectZero];
+}
+
++ (QuizResultView *)quizResultView {
+    return [[QuizResultView alloc] initWithFrame:CGRectZero];
+}
+
++ (QuizView *)quizView {
+    return [[QuizView alloc] initWithFrame:CGRectZero];
 }
 
 + (UILabel *)quizQuestionLabel {
@@ -48,6 +54,14 @@
     label.font = [UIFont systemFontOfSize:12.0f weight:UIFontWeightThin];
     label.textColor = [UIColor whiteColor];
     label.highlightedTextColor = [UIColor blackColor];
+    return label;
+}
+
++ (UILabel *)applauseLabel {
+    UILabel * label = [[UILabel alloc] initWithFrame:CGRectZero];
+    label.text = @"Brawo!";
+    label.font = [UIFont systemFontOfSize:32.0f weight:UIFontWeightThin];
+    label.textColor = [UIColor whiteColor];
     return label;
 }
 
@@ -89,6 +103,23 @@
     view.layer.borderWidth = 1.0f;
     view.layer.borderColor = [UIColor whiteColor].CGColor;
     return view;
+}
+
++ (MBCircularProgressBarView *)percentageResultView {
+    MBCircularProgressBarView * circularProgressBarView = [[MBCircularProgressBarView alloc] initWithFrame:CGRectZero];
+    circularProgressBarView.fontColor = [UIColor whiteColor];
+    circularProgressBarView.showValueString = YES;
+    circularProgressBarView.unitString = @"%";
+    circularProgressBarView.showUnitString = YES;
+    circularProgressBarView.progressCapType = kCGLineCapSquare;
+    circularProgressBarView.progressColor = [UIColor whiteColor];
+    circularProgressBarView.progressStrokeColor = [UIColor whiteColor];
+    circularProgressBarView.emptyLineColor = [UIColor whiteColor];
+    [circularProgressBarView mas_makeConstraints:^(MASConstraintMaker * make) {
+        make.width.equalTo(@150.0f);
+        make.height.equalTo(circularProgressBarView.mas_width);
+    }];
+    return circularProgressBarView;
 }
 
 + (UIButton *)button {

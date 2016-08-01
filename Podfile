@@ -3,4 +3,5 @@ target 'iQuizek' do
     pod 'Masonry'
     pod 'RestKit'
     pod 'SDWebImage'
+    pod 'MBCircularProgressBar'
 end

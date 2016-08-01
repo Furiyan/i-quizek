@@ -16,6 +16,8 @@
 		EE7B69451D4FC628005C34C8 /* Styler.m in Sources */ = {isa = PBXBuildFile; fileRef = EE7B69441D4FC628005C34C8 /* Styler.m */; };
 		EE7B69481D4FC909005C34C8 /* QuizView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE7B69471D4FC909005C34C8 /* QuizView.m */; };
 		EE7B694F1D4FDA50005C34C8 /* QuizProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE7B694E1D4FDA50005C34C8 /* QuizProgressView.m */; };
+		EE7B69521D4FEACC005C34C8 /* QuizResultView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE7B69511D4FEACC005C34C8 /* QuizResultView.m */; };
+		EE7B69551D4FECA4005C34C8 /* QuizResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE7B69541D4FECA4005C34C8 /* QuizResultViewController.m */; };
 		EEC6EA851D4F33F1007CFE70 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC6EA841D4F33F1007CFE70 /* Photo.m */; };
 		EED74AB31D4E45360075F2C8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EED74AB21D4E45360075F2C8 /* main.m */; };
 		EED74AB61D4E45360075F2C8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EED74AB51D4E45360075F2C8 /* AppDelegate.m */; };
@@ -31,6 +33,7 @@
 		EEFA0E571D4F627B0082EE14 /* QuizQuestion.m in Sources */ = {isa = PBXBuildFile; fileRef = EEFA0E561D4F627B0082EE14 /* QuizQuestion.m */; };
 		EEFA0E5A1D4F7F600082EE14 /* QuizQuestionView.m in Sources */ = {isa = PBXBuildFile; fileRef = EEFA0E591D4F7F600082EE14 /* QuizQuestionView.m */; };
 		EEFA0E5E1D4F88640082EE14 /* QuizQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEFA0E5D1D4F88640082EE14 /* QuizQuestionViewController.m */; };
+		EEFCA9D21D4FF9C70040DE2F /* QuizNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEFCA9D11D4FF9C70040DE2F /* QuizNavigationController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +56,10 @@
 		EE7B69471D4FC909005C34C8 /* QuizView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizView.m; sourceTree = "<group>"; };
 		EE7B694D1D4FDA50005C34C8 /* QuizProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizProgressView.h; sourceTree = "<group>"; };
 		EE7B694E1D4FDA50005C34C8 /* QuizProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizProgressView.m; sourceTree = "<group>"; };
+		EE7B69501D4FEACC005C34C8 /* QuizResultView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizResultView.h; sourceTree = "<group>"; };
+		EE7B69511D4FEACC005C34C8 /* QuizResultView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizResultView.m; sourceTree = "<group>"; };
+		EE7B69531D4FECA4005C34C8 /* QuizResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizResultViewController.h; sourceTree = "<group>"; };
+		EE7B69541D4FECA4005C34C8 /* QuizResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizResultViewController.m; sourceTree = "<group>"; };
 		EEC6EA831D4F33F1007CFE70 /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
 		EEC6EA841D4F33F1007CFE70 /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
 		EED74AAE1D4E45360075F2C8 /* iQuizek.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iQuizek.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,6 +88,8 @@
 		EEFA0E591D4F7F600082EE14 /* QuizQuestionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizQuestionView.m; sourceTree = "<group>"; };
 		EEFA0E5C1D4F88640082EE14 /* QuizQuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizQuestionViewController.h; sourceTree = "<group>"; };
 		EEFA0E5D1D4F88640082EE14 /* QuizQuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizQuestionViewController.m; sourceTree = "<group>"; };
+		EEFCA9D01D4FF9C70040DE2F /* QuizNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuizNavigationController.h; sourceTree = "<group>"; };
+		EEFCA9D11D4FF9C70040DE2F /* QuizNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuizNavigationController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +133,8 @@
 				EEFA0E591D4F7F600082EE14 /* QuizQuestionView.m */,
 				EE7B694D1D4FDA50005C34C8 /* QuizProgressView.h */,
 				EE7B694E1D4FDA50005C34C8 /* QuizProgressView.m */,
+				EE7B69501D4FEACC005C34C8 /* QuizResultView.h */,
+				EE7B69511D4FEACC005C34C8 /* QuizResultView.m */,
 				EEFA0E5F1D4F88840082EE14 /* Controllers */,
 			);
 			name = Views;
@@ -188,6 +199,8 @@
 				EEFA0E4F1D4F4DDB0082EE14 /* UserInterfaceConstants.m */,
 				EE7B69431D4FC628005C34C8 /* Styler.h */,
 				EE7B69441D4FC628005C34C8 /* Styler.m */,
+				EEFCA9D01D4FF9C70040DE2F /* QuizNavigationController.h */,
+				EEFCA9D11D4FF9C70040DE2F /* QuizNavigationController.m */,
 				EE519E581D4E5559003DCDAF /* Factories */,
 				EE519E541D4E5333003DCDAF /* Views */,
 				EE519E501D4E5090003DCDAF /* Cells */,
@@ -248,6 +261,8 @@
 				EE7B69411D4FAC38005C34C8 /* QuizViewController.m */,
 				EEFA0E5C1D4F88640082EE14 /* QuizQuestionViewController.h */,
 				EEFA0E5D1D4F88640082EE14 /* QuizQuestionViewController.m */,
+				EE7B69531D4FECA4005C34C8 /* QuizResultViewController.h */,
+				EE7B69541D4FECA4005C34C8 /* QuizResultViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -384,6 +399,7 @@
 				EEC6EA851D4F33F1007CFE70 /* Photo.m in Sources */,
 				EE7B69481D4FC909005C34C8 /* QuizView.m in Sources */,
 				EE519E571D4E5378003DCDAF /* QuizOverviewView.m in Sources */,
+				EE7B69551D4FECA4005C34C8 /* QuizResultViewController.m in Sources */,
 				EEFA0E541D4F60990082EE14 /* QuizAnswer.m in Sources */,
 				EEE5ABAB1D4E884C004A3377 /* QuizProvider.m in Sources */,
 				EEFA0E5E1D4F88640082EE14 /* QuizQuestionViewController.m in Sources */,
@@ -392,10 +408,12 @@
 				EEE5ABB31D4E9F8A004A3377 /* DescriptorFactory.m in Sources */,
 				EEFA0E571D4F627B0082EE14 /* QuizQuestion.m in Sources */,
 				EE7B69451D4FC628005C34C8 /* Styler.m in Sources */,
+				EE7B69521D4FEACC005C34C8 /* QuizResultView.m in Sources */,
 				EEFA0E501D4F4DDB0082EE14 /* UserInterfaceConstants.m in Sources */,
 				EEFA0E5A1D4F7F600082EE14 /* QuizQuestionView.m in Sources */,
 				EE7B69421D4FAC38005C34C8 /* QuizViewController.m in Sources */,
 				EE519E531D4E5135003DCDAF /* QuizCell.m in Sources */,
+				EEFCA9D21D4FF9C70040DE2F /* QuizNavigationController.m in Sources */,
 				EED74AB61D4E45360075F2C8 /* AppDelegate.m in Sources */,
 				EE519E5E1D4E6963003DCDAF /* QuizzesViewController.m in Sources */,
 				EE519E5B1D4E55EA003DCDAF /* ViewFactory.m in Sources */,

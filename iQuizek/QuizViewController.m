@@ -8,9 +8,12 @@
 
 #import "QuizViewController.h"
 
+#import "QuizAnswer.h"
 #import "QuizProgressView.h"
 #import "QuizProvider.h"
+#import "QuizQuestion.h"
 #import "QuizQuestionViewController.h"
+#import "QuizResultViewController.h"
 #import "QuizView.h"
 #import "ViewFactory.h"
 
@@ -23,6 +26,8 @@
 @property (nonatomic) NSArray<QuizQuestion *> * questions;
 
 @property (nonatomic) NSUInteger currentQuestionIndex;
+
+@property (nonatomic) NSUInteger correctAnswers;
 
 @property (nonatomic) QuizQuestionViewController * quizQuestionViewCtrl;
 
@@ -78,11 +83,24 @@
     [self.quizQuestionViewCtrl reloadWithQuizQuestion:self.questions[self.currentQuestionIndex]];
 }
 
+- (void)finishQuiz {
+    CGFloat percentageResult = (float)self.correctAnswers / self.questions.count * 100.0f;
+    QuizResultViewController * resultViewCtrl
+        = [[QuizResultViewController alloc] initWithPercentageResult:percentageResult];
+    resultViewCtrl.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    [self presentViewController:resultViewCtrl animated:YES completion:nil];
+}
+
 #pragma mark - QuizQuestionViewControllerDelegate Method(s)
 
 - (void)userDidSelectAnswerAtIndex:(NSUInteger)answerIndex {
+    if (self.questions[self.currentQuestionIndex].answers[answerIndex].correct) {
+        self.correctAnswers++;
+    }
     if (self.currentQuestionIndex < self.questions.count - 1) {
         [self goToNextQuestion];
+    } else {
+        [self finishQuiz];
     }
 }
 

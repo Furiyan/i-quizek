@@ -2,6 +2,7 @@ PODS:
   - ISO8601DateFormatterValueTransformer (0.6.1):
     - RKValueTransformers (~> 1.1.0)
   - Masonry (1.0.1)
+  - MBCircularProgressBar (0.3.4)
   - RestKit (0.27.0):
     - RestKit/Core (= 0.27.0)
   - RestKit/Core (0.27.0):
@@ -29,18 +30,20 @@ PODS:
 
 DEPENDENCIES:
   - Masonry
+  - MBCircularProgressBar
   - RestKit
   - SDWebImage
 
 SPEC CHECKSUMS:
   ISO8601DateFormatterValueTransformer: 52da467d6ec899d6aedda8e48280ac92e8ee97e6
   Masonry: a1a931a0d08870ed8ae415a2ea5ea68ebcac77df
+  MBCircularProgressBar: ff3b8e2f441214d9ee122a24ba0d4d00cc7de881
   RestKit: a0244db34e14ed9cf059fcee2be6733cc162c34a
   RKValueTransformers: e5ed67e3811229b616fe01bddeeafe3bb337b1b9
   SDWebImage: 35f9627a3e44b4f292a8a8ce6a531fa488239b91
   SOCKit: c7376ac262bea9115b8f749358f762522a47d392
   TransitionKit: 9ceccda4cd0cdc0a05ef85eb235e5a3292c3c250
 
-PODFILE CHECKSUM: 77ef1be90ff0d7b0c1b2f9e9c6dadba9ef18e55a
+PODFILE CHECKSUM: 2366fd8aa225bca535499b9a2dd96a445c8eabea
 
 COCOAPODS: 1.0.1
